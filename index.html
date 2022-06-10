@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+
+  <div id="div1">
+
+    <section class="section1">
+      
+      <div class="image-div">
+      <img class="img-star" src="./images/icon-star.svg">
+      </div>
+
+      <h1>How did we do?</h1>
+
+      <br>
+      
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+  
+      <br>
+      
+      <div id="buttonDiv">
+        <button class="circle" value="1" onclick="selectedButton(1)">1</button>
+        <button class="circle" value="2" onclick="selectedButton(2)">2</button>
+        <button class="circle" value="3" onclick="selectedButton(3)">3</button>
+        <button class="circle" value="4" onclick="selectedButton(4)">4</button>
+        <button class="circle" value="5" onclick="selectedButton(5)">5</button>
+      </div>
+
+      <br>
+      
+      <div id="submitButtonDiv">
+        <button onclick="showNext()" class="submitButton">Submit</button>
+      </div>
+
+      <br>
+
+    </section>
+      
+
+    <section class="section2">
+
+      <div>
+        <img  src="./images/illustration-thank-you.svg">
+      </div>
+
+      <br>
+
+      <div class="result-div">
+        <p class="p-result">You selected </p><p id="result" class="p-result"></p><p class="p-result"> out of 5</p>
+      </div>
+
+      <br>
+      
+      <div>
+      <h1 style="text-align: center;">Thank you!</h1>
+
+      <p style="text-align: center; color: hsl(217, 12%, 63%);">
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+      </p>
+      </div>
+
+    </section>
+  </div>
+
+  <script>
+    function selectedButton (x) {
+      document.getElementById("result").innerHTML = x;
+    }
+  </script>
+  
+  <script>
+    function showNext () {
+      document.querySelector(".section1").style.display = "none";
+      document.querySelector(".section2").style.display = "inline";
+    }
+  </script>
+
+  
+</body>
+</html>
